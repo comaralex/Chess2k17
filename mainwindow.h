@@ -23,6 +23,9 @@ private slots:
     void on_pushButton_figures_clicked();
 
 private:
+    void styleSheetOptions();
+
+private:
     Ui::MainWindow  *ui;
     Options         *uiOptions;
 

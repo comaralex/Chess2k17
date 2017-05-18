@@ -5,6 +5,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    styleSheetOptions();
+
     ui->setupUi(this);
 
     uiOptions = new Options();
@@ -37,6 +39,13 @@ void MainWindow::on_pushButton_figures_clicked()
 {
     uiOptions->hide();
     uiOptions->show();
+}
+
+void MainWindow::styleSheetOptions()
+{
+    //TODO Add styleSheet using params
+//    qApp->setStyleSheet("QLabel { color: yellow 50; }"
+//                        "QGroupBox::title { color: yellow 50; }");
 }
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
