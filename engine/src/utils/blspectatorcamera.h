@@ -1,7 +1,7 @@
 #ifndef BLSPECTATORCAMERA_H
 #define BLSPECTATORCAMERA_H
 
-#include <blcamera.h>
+#include "blcamera.h"
 #include <QPoint>
 
 namespace black {

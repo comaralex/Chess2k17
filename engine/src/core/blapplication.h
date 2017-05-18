@@ -41,26 +41,22 @@ public:
     // QWidget interface
     virtual void keyPressEvent(QKeyEvent *event);
     virtual void mouseMoveEvent(QMouseEvent *);
-
 private:
-    void initModels();
     void loadResources();
     void prepareToRender();
 
 private:
     std::unique_ptr<black::ShaderProgram> m_program;
+    std::unique_ptr<black::ShaderProgram> m_diffuseShader;
 
     std::shared_ptr<black::Shader> m_vShader;
     std::shared_ptr<black::Shader> m_fShader;
 
-    std::unique_ptr<black::CubeMesh> m_cubeMesh;
-    std::unique_ptr<black::Mesh> m_axisMesh;
-
     bool m_initialized = false;
 
-    black::Camera* m_currentCamera;
-    std::unique_ptr<black::Camera> m_specCamera;
-    std::unique_ptr<black::Camera> m_objCamera;
+    std::shared_ptr<black::Camera> m_currentCamera;
+    std::shared_ptr<black::Camera> m_specCamera;
+    std::shared_ptr<black::Camera> m_objCamera;
     std::unique_ptr<black::Timer> m_timer;
 
     // Handled by rm
@@ -69,14 +65,12 @@ private:
     std::shared_ptr<black::Model> m_monkeyMesh;
     std::shared_ptr<black::Model> m_houseModel;
     std::shared_ptr<black::Model> m_landModel;
-    std::shared_ptr<black::Model> m_cubeModel;
-    std::shared_ptr<black::Model> m_planeModel;
     std::shared_ptr<black::Model> m_skyBoxModel;
     std::shared_ptr<black::Model> m_flyingIslandModel;
 
     std::shared_ptr<black::Texture> m_brickTexture;
 
-    std::unique_ptr<black::Light> m_lightSource;
+    std::shared_ptr<black::Light> m_lightSource;
 
     // QWindow interface
 protected:
