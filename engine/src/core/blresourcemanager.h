@@ -8,7 +8,7 @@
 #include <memory>
 #include <QFileInfo>
 
-#include "blconstants.h"
+#include <blconstants.h>
 #include <blfileexceptions.h>
 #include <bllogger.h>
 

@@ -50,9 +50,9 @@ void MainWindow::styleSheetOptions()
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
-    this->mouseMoveEvent(event);
+    ui->openGLWidget->mouseMoveEvent(event);
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event) {
-    this->keyPressEvent(event);
+    ui->openGLWidget->keyPressEvent(event);
 }

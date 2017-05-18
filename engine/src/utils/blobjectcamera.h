@@ -1,7 +1,7 @@
 #ifndef BL_OBJECTCAMERA_H
 #define BL_OBJECTCAMERA_H
 
-#include <blcamera.h>
+#include "blcamera.h"
 
 namespace black {
 

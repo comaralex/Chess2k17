@@ -1,5 +1,5 @@
 #include "blresourcemanager.h"
-#include <bllogger.h>
+#include "bllogger.h"
 
 namespace black {
 
