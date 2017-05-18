@@ -15,7 +15,26 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_pushButton_options_clicked()
 {
+    uiOptions->hide();
+    uiOptions->show();
+}
+
+void MainWindow::on_pushButton_levelAI_clicked()
+{
+    uiOptions->hide();
+    uiOptions->show();
+}
+
+void MainWindow::on_pushButton_soundMusic_clicked()
+{
+    uiOptions->hide();
+    uiOptions->show();
+}
+
+void MainWindow::on_pushButton_figures_clicked()
+{
+    uiOptions->hide();
     uiOptions->show();
 }

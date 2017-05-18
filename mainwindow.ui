@@ -57,7 +57,7 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QTimeEdit" name="timeEdit">
+         <widget class="QTimeEdit" name="timeEdit_timeWhite">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -74,14 +74,14 @@
          </widget>
         </item>
         <item row="3" column="0">
-         <widget class="QTimeEdit" name="timeEdit_2">
+         <widget class="QTimeEdit" name="timeEdit_timeBlack">
           <property name="enabled">
            <bool>false</bool>
           </property>
          </widget>
         </item>
         <item row="4" column="0">
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="pushButton_timePause">
           <property name="text">
            <string>Пауза</string>
           </property>
@@ -97,7 +97,7 @@
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
-         <widget class="QToolButton" name="toolButton">
+         <widget class="QToolButton" name="toolButton_imageCurrentStep">
           <property name="text">
            <string>Image AI</string>
           </property>
@@ -138,14 +138,14 @@
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0">
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="pushButton_view">
           <property name="text">
            <string>Вид 2D/3D</string>
           </property>
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QCheckBox" name="checkBox">
+         <widget class="QCheckBox" name="checkBox_fieldEnable">
           <property name="text">
            <string>Игровое поле</string>
           </property>
@@ -161,14 +161,14 @@
        </property>
        <layout class="QGridLayout" name="gridLayout_4">
         <item row="0" column="0">
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="pushButton_options">
           <property name="text">
            <string>Установки</string>
           </property>
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QPushButton" name="pushButton_4">
+         <widget class="QPushButton" name="pushButton_levelAI">
           <property name="text">
            <string>Уровень AI</string>
           </property>
@@ -182,14 +182,14 @@
          </widget>
         </item>
         <item row="3" column="0">
-         <widget class="QPushButton" name="pushButton_5">
+         <widget class="QPushButton" name="pushButton_soundMusic">
           <property name="text">
            <string>Звук/Музыка</string>
           </property>
          </widget>
         </item>
         <item row="4" column="0">
-         <widget class="QPushButton" name="pushButton_6">
+         <widget class="QPushButton" name="pushButton_figures">
           <property name="text">
            <string>Фигуры</string>
           </property>
@@ -221,35 +221,35 @@
        </property>
        <layout class="QGridLayout" name="gridLayout_5">
         <item row="3" column="0">
-         <widget class="QPushButton" name="pushButton_10">
+         <widget class="QPushButton" name="pushButton_quit">
           <property name="text">
            <string>Выход</string>
           </property>
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QPushButton" name="pushButton_9">
+         <widget class="QPushButton" name="pushButton_saveGame">
           <property name="text">
            <string>Сохранить</string>
           </property>
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QPushButton" name="pushButton_7">
+         <widget class="QPushButton" name="pushButton_newGame">
           <property name="text">
            <string>Новая игра</string>
           </property>
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QPushButton" name="pushButton_8">
+         <widget class="QPushButton" name="pushButton_loadGame">
           <property name="text">
            <string>Загрузить</string>
           </property>
          </widget>
         </item>
         <item row="5" column="0">
-         <widget class="QPushButton" name="pushButton_17">
+         <widget class="QPushButton" name="pushButton_draw">
           <property name="text">
            <string>Предложить ничью</string>
           </property>
@@ -263,7 +263,7 @@
          </widget>
         </item>
         <item row="6" column="0">
-         <widget class="QPushButton" name="pushButton_18">
+         <widget class="QPushButton" name="pushButton_surrender">
           <property name="text">
            <string>Сдаться</string>
           </property>
@@ -294,10 +294,10 @@
         <item row="1" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QLineEdit" name="lineEdit"/>
+           <widget class="QLineEdit" name="lineEdit_currentStep"/>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_13">
+           <widget class="QPushButton" name="pushButton_step">
             <property name="text">
              <string>Ход</string>
             </property>
@@ -327,21 +327,21 @@
         <item row="3" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QPushButton" name="pushButton_14">
+           <widget class="QPushButton" name="pushButton_lastStep">
             <property name="text">
              <string>&lt;</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_16">
+           <widget class="QPushButton" name="pushButton_loopStep">
             <property name="text">
              <string>|&gt;</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_15">
+           <widget class="QPushButton" name="pushButton_nextStep">
             <property name="text">
              <string>&gt;</string>
             </property>
@@ -359,7 +359,7 @@
        </property>
        <layout class="QGridLayout" name="gridLayout_7">
         <item row="0" column="0">
-         <widget class="QPushButton" name="pushButton_11">
+         <widget class="QPushButton" name="pushButton_analize">
           <property name="text">
            <string>Показать</string>
           </property>
@@ -373,7 +373,7 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QPushButton" name="pushButton_12">
+         <widget class="QPushButton" name="pushButton_about">
           <property name="text">
            <string>Справка</string>
           </property>
