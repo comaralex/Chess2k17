@@ -5,7 +5,7 @@
 #include <memory>
 
 /* Qt */
-#include <QOpenGLWindow>
+#include <QOpenGLWidget>
 #include <QOpenGLFunctions>
 #include <QOpenGLShaderProgram>
 #include <QOpenGLShader>
@@ -23,10 +23,10 @@
 #include <blcubemesh.h>
 #include <bltimer.h>
 
-class BLApplication : public QOpenGLWindow, public QOpenGLFunctions {
+class BLApplication : public QOpenGLWidget, public QOpenGLFunctions {
 
 public:
-    BLApplication(QWindow *parent = nullptr);
+    BLApplication(QWidget *parent = nullptr);
 
     virtual ~BLApplication();
 
@@ -37,9 +37,11 @@ protected:
     virtual void resizeGL(int w, int h);
     virtual void paintGL();
 
+public:
     // QWidget interface
     virtual void keyPressEvent(QKeyEvent *event);
     virtual void mouseMoveEvent(QMouseEvent *);
+
 private:
     void initModels();
     void loadResources();

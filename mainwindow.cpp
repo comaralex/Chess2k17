@@ -38,3 +38,12 @@ void MainWindow::on_pushButton_figures_clicked()
     uiOptions->hide();
     uiOptions->show();
 }
+
+void MainWindow::mouseMoveEvent(QMouseEvent *event)
+{
+    this->mouseMoveEvent(event);
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event) {
+    this->keyPressEvent(event);
+}

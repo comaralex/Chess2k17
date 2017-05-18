@@ -25,6 +25,11 @@ private slots:
 private:
     Ui::MainWindow  *ui;
     Options         *uiOptions;
+
+    // QWidget interface
+protected:
+    void mouseMoveEvent(QMouseEvent *event) override;
+    void keyPressEvent(QKeyEvent *event) override;
 };
 
 #endif // MAINWINDOW_H

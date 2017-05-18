@@ -20,8 +20,8 @@ using std::make_unique;
 using std::make_shared;
 using namespace black;
 
-BLApplication::BLApplication(QWindow *parent)
-    : QOpenGLWindow(NoPartialUpdate, parent),
+BLApplication::BLApplication(QWidget *parent)
+    : QOpenGLWidget(parent),
       m_specCamera(),
       m_timer(),
       m_stallMesh(),
@@ -35,17 +35,12 @@ BLApplication::BLApplication(QWindow *parent)
     format.setDepthBufferSize(24);
     format.setProfile(QSurfaceFormat::CoreProfile);
 
-    setWidth(Constants::WIDTH);
-    setHeight(Constants::HEIGHT);
-
     this->setFormat(format);
 
     m_specCamera = make_unique<SpectatorCamera>();
     m_objCamera = make_unique<SpectatorCamera>();
     m_currentCamera = m_specCamera.get();
     m_timer = make_unique<Timer>();
-
-    this->setMouseGrabEnabled(true);
 
     connect(this, SIGNAL(frameSwapped()), this, SLOT(update()));
 }

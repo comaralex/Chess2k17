@@ -14,7 +14,7 @@
    <string>Шахматы</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QOpenGLWidget" name="openGLWidget">
+   <widget class="BLApplication" name="openGLWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -421,6 +421,13 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>BLApplication</class>
+   <extends>QOpenGLWidget</extends>
+   <header>blapplication.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
