@@ -6,7 +6,6 @@
 #include <bltexture.h>
 #include <bllogger.h>
 #include <blspectatorcamera.h>
-#include <diffuseshader.h>
 
 #include <QMouseEvent>
 #include <QSurfaceFormat>
@@ -14,6 +13,8 @@
 #include <QtMath>
 
 #include <GL/gl.h>
+
+#include <memory>
 
 using std::make_unique;
 using std::make_shared;
@@ -97,12 +98,6 @@ void BLApplication::initializeGL()
         exit(1);
     }
 
-    try {
-        m_diffuseShader = make_unique<DiffuseShader>();
-    } catch(std::string e) { // TODO: exceptions
-        exit(1);
-    }
-
     m_program->bind();
 
     loadResources();
@@ -155,11 +150,6 @@ void BLApplication::paintGL()
     m_flyingIslandModel->render();
     glCullFace(GL_BACK);
 
-//    /* PLANE MODEL */
-//    m_planeModel->setScale(dCoord);
-//    m_program->setWorldMatrix(m_camera->perspective() * m_camera->view() * m_planeModel->modelMatrix());
-//    m_planeModel->render();
-
     QMatrix4x4 mvpMatrix;
 
     m_program->disableTextures();
@@ -186,39 +176,17 @@ void BLApplication::paintGL()
 
     m_program->enableTextures();
 
-    /* AXIS MESH */
-    mvpMatrix.setToIdentity();
-    mvpMatrix = m_specCamera->perspective() * m_specCamera->view() * mvpMatrix;
-
-    mvpMatrix.setToIdentity();
-
-    m_axisMesh->bind();
-
-    if ( m_axisMesh->isIndexed() ) {
-        glDrawElements(GL_TRIANGLE_STRIP, m_axisMesh->vertexCount(), GL_UNSIGNED_INT, 0);
-    } else {
-        glDrawArrays(GL_LINE_STRIP, 0, m_axisMesh->vertexCount());
-    }
-
-    m_axisMesh->release();
-    m_program->release();
-
-    m_diffuseShader->bind();
-
     /* SKY BOX */
     glDisable(GL_CULL_FACE);
 
     m_skyBoxModel->setScale(1000.0f);
-    m_diffuseShader->setCamera(m_currentCamera);
-    m_diffuseShader->setModelMatrix(m_skyBoxModel->modelMatrix());
+    m_program->setCamera(m_currentCamera);
+    m_program->setModelMatrix(m_skyBoxModel->modelMatrix());
     m_skyBoxModel->render();
 
-    m_diffuseShader->release();
+    m_program->release();
 
-    dCoord += 0.002f;
-
-    //Logger::getInstance() << "mpf = " << m_timer->mpf() << '\n';
-    //Logger::getInstance() << "fps = " << m_timer->fps() << '\n';
+    dCoord += 0.001f;
 }
 
 void BLApplication::initModels()

@@ -1,7 +1,7 @@
 #include "blshaderprogram.h"
 
-#include <src/utils/bllogger.h>
-#include <src/core/blconstants.h>
+#include <bllogger.h>
+#include <blconstants.h>
 
 namespace black {
 

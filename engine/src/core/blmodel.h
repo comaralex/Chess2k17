@@ -1,9 +1,9 @@
 #ifndef MODEL_H
 #define MODEL_H
 
-#include <src/core/blmaterial.h>
-#include <src/core/blmesh.h>
-#include <src/core/bltexture.h>
+#include <blmaterial.h>
+#include <blmesh.h>
+#include <bltexture.h>
 
 #include <memory>
 

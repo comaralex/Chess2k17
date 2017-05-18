@@ -1,8 +1,8 @@
 #ifndef BLSHADER_H
 #define BLSHADER_H
 
-#include <src/core/blresourcemanager.h>
-#include <src/core/blresource.h>
+#include <blresourcemanager.h>
+#include <blresource.h>
 
 #include <QOpenGLShader>
 

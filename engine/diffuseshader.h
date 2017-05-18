@@ -1,7 +1,7 @@
 #ifndef DIFFUSESHADER_H
 #define DIFFUSESHADER_H
 
-#include <src/core/blshaderprogram.h>
+#include <blshaderprogram.h>
 
 class DiffuseShader : public black::ShaderProgram
 {

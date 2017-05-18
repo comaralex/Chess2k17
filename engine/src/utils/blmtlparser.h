@@ -1,7 +1,7 @@
 #ifndef BLMTLPARSER_H
 #define BLMTLPARSER_H
 
-#include <src/core/blmaterial.h>
+#include <blmaterial.h>
 
 #include <string>
 #include <fstream>

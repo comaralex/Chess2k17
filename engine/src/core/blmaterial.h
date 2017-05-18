@@ -1,8 +1,8 @@
 #ifndef BLMATERIAL_H
 #define BLMATERIAL_H
 
-#include <src/core/blresourcemanager.h>
-#include <src/core/bltexture.h>
+#include <blresourcemanager.h>
+#include <bltexture.h>
 
 #include <QVector3D>
 

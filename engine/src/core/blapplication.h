@@ -11,17 +11,17 @@
 #include <QOpenGLShader>
 
 /* Core */
-#include <src/core/blmesh.h>
-#include <src/core/blcamera.h>
-#include <src/core/blshaderprogram.h>
-#include <src/core/blmodel.h>
-#include <src/core/blconstants.h>
-#include <src/core/bltexture.h>
+#include <blmesh.h>
+#include <blcamera.h>
+#include <blshaderprogram.h>
+#include <blmodel.h>
+#include <blconstants.h>
+#include <bltexture.h>
 
 /* Utils */
-#include <src/utils/bllight.h>
-#include <src/utils/blcubemesh.h>
-#include <src/utils/bltimer.h>
+#include <bllight.h>
+#include <blcubemesh.h>
+#include <bltimer.h>
 
 class BLApplication : public QOpenGLWindow, public QOpenGLFunctions {
 
@@ -47,7 +47,6 @@ private:
 
 private:
     std::unique_ptr<black::ShaderProgram> m_program;
-    std::unique_ptr<black::ShaderProgram> m_diffuseShader;
 
     std::shared_ptr<black::Shader> m_vShader;
     std::shared_ptr<black::Shader> m_fShader;

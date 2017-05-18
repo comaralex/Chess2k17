@@ -1,7 +1,7 @@
 #include "blmaterial.h"
 
 #include <blmtlparser.h>
-#include <src/utils/bllogger.h>
+#include <bllogger.h>
 
 namespace black {
 

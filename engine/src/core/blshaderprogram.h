@@ -3,10 +3,10 @@
 
 #include "blcamera.h"
 
-#include <src/core/blshader.h>
-#include <src/core/blmaterial.h>
+#include <blshader.h>
+#include <blmaterial.h>
 
-#include <src/utils/bllight.h>
+#include <bllight.h>
 
 #include <QOpenGLShaderProgram>
 

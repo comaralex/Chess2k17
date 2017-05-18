@@ -1,7 +1,7 @@
 #include "blmesh.h"
 
-#include <src/utils/blobjparser.h>
-#include <src/core/blconstants.h>
+#include <blobjparser.h>
+#include <blconstants.h>
 
 #include <iostream>
 

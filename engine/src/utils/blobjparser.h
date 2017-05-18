@@ -1,7 +1,7 @@
 #ifndef BLOBJPARSER_H
 #define BLOBJPARSER_H
 
-#include "src/core/blmesh.h"
+#include <blmesh.h>
 
 #include <deque>
 #include <vector>

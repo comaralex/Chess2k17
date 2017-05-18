@@ -1,6 +1,6 @@
 #include "bltexture.h"
 
-#include <src/utils/bllogger.h>
+#include <bllogger.h>
 
 #include <QImage>
 #include <QDebug>

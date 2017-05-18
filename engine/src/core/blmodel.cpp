@@ -1,7 +1,7 @@
 #include "blmodel.h"
 
 #include <blobjparser.h>
-#include <src/utils/bllogger.h>
+#include <bllogger.h>
 #include <blfileexceptions.h>
 
 #include <iostream>
