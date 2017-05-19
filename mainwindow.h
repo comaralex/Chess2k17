@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTimer>
 #include "options.h"
 
 namespace Ui {
@@ -22,12 +23,17 @@ private slots:
     void on_pushButton_soundMusic_clicked();
     void on_pushButton_figures_clicked();
 
+    void updateGui();
 private:
     void styleSheetOptions();
 
 private:
     Ui::MainWindow  *ui;
     Options         *uiOptions;
+
+    QTimer           *m_timer;
+
+    bool m_hideMenu = false;
 
     // QWidget interface
 protected:
