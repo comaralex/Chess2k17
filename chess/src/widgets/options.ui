@@ -23,7 +23,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>-333</y>
         <width>405</width>
         <height>778</height>
        </rect>
@@ -348,10 +348,10 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">border-image: url(:/res/images/images/pawn_white.svg);</string>
+                   <string notr="true">border-image: url(:/res/images/pawn_white);</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>P</string>
                   </property>
                   <property name="autoExclusive">
                    <bool>true</bool>
@@ -373,10 +373,10 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">border-image: url(:/res/images/images/rook_white.svg);</string>
+                   <string notr="true">border-image: url(:/res/images/rook_white);</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>R</string>
                   </property>
                   <property name="autoExclusive">
                    <bool>true</bool>
@@ -398,10 +398,10 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">border-image: url(:/res/images/images/knight_white.svg);</string>
+                   <string notr="true">border-image: url(:/res/images/knight_white);</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>H</string>
                   </property>
                   <property name="autoExclusive">
                    <bool>true</bool>
@@ -423,10 +423,10 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">border-image: url(:/res/images/images/bishop_white.svg);</string>
+                   <string notr="true">border-image: url(:/res/images/bishop_white);</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>B</string>
                   </property>
                   <property name="autoExclusive">
                    <bool>true</bool>
@@ -448,10 +448,10 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">border-image: url(:/res/images/images/king_white.svg);</string>
+                   <string notr="true">border-image: url(:/res/images/king_white);</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>K</string>
                   </property>
                   <property name="autoExclusive">
                    <bool>true</bool>
@@ -473,10 +473,10 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">border-image: url(:/res/images/images/queen_white.svg);</string>
+                   <string notr="true">border-image: url(:/res/images/queen_white);</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>Q</string>
                   </property>
                   <property name="autoExclusive">
                    <bool>true</bool>
@@ -521,11 +521,11 @@
             </property>
             <property name="styleSheet">
              <string notr="true">/* Style QTableWidget */
-QTableWidget {
+/*QTableWidget {
 	color: rgba(0, 0, 255, 255);
 	background: rgba(238, 238, 238, 200);
     show-decoration-selected: 1; /* make the selection span the entire width of the view */
-}
+/*}
 
 QTableWidget::item:alternate {
     background: #EEEEEE;
@@ -549,7 +549,7 @@ QTableWidget::item:selected:active {
 QTableWidget::item:hover {
     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                 stop: 0 #FAFBFE, stop: 1 #DCDEF1);
-}</string>
+}*/</string>
             </property>
             <attribute name="horizontalHeaderDefaultSectionSize">
              <number>30</number>
