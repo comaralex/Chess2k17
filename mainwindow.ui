@@ -17,14 +17,17 @@
    <string>Шахматы</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel {
+   <string notr="true">/* Style QLabel */
+QLabel {
 	color: rgba(255, 255, 0, 200);
 }
 
-/*QGroupBox::title {
-	color: rgba(255, 255, 0, 200);
-}*/
+/* Style QCheckBox */
+QAbstractButton {
+	color: rgba(0, 0, 255, 200);
+}
 
+/* Style QGroupBox */
 QGroupBox {
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
@@ -38,17 +41,20 @@ QGroupBox::title {
 	font: 75 italic 8pt &quot;Arial&quot;; /*why not working*/
     subcontrol-origin: margin;
     subcontrol-position: top center; /* position at the top center */
-    padding: 2 3px;
+    padding: 0 3pt;
     /*background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                       stop: 0 #FFOECE, stop: 1 #FFFFFF);*/
 	color: rgba(255, 255, 0, 200);
 }
 
+
+/* Style QPushButton */
 QPushButton {
     border: 2px solid #8f8f91;
     border-radius: 6px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+    /*background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(226, 232, 250, 200), stop:1 rgba(135, 157, 222, 200));
     min-width: 40px;
 }
 
@@ -79,6 +85,58 @@ QPushButton::menu-indicator {
 QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
     position: relative;
     top: 2px; left: 2px; /* shift the arrow by 2 px */
+}
+
+/* Style QTimeEdit */
+QTimeEdit {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    /*background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(226, 232, 250, 200), stop:1 rgba(135, 157, 222, 200));
+    min-width: 40px;
+}
+
+/* Style QLineEdit */
+QLineEdit {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    /*background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);*/
+	color: rgba(0, 0, 255, 200);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(226, 232, 250, 200), stop:1 rgba(135, 157, 222, 200));
+    min-width: 40px;
+}
+
+/* Style QListWidget */
+QListWidget {
+	color: rgba(0, 0, 255, 255);
+	background: rgba(238, 238, 238, 200);
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+
+QListWidget::item:alternate {
+    background: #EEEEEE;
+}
+
+QListWidget::item:selected {
+    border: 1px solid #6a6ea9;
+
+}
+
+QListWidget::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ABAFE5, stop: 1 #8588B2);
+}
+
+QListWidget::item:selected:active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #6a6ea9, stop: 1 #888dd9);
+}
+
+QListWidget::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #FAFBFE, stop: 1 #DCDEF1);
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -352,29 +410,11 @@ QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
         <string>Партия</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_6">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string>Ход</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QLineEdit" name="lineEdit_currentStep"/>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_step">
-            <property name="text">
-             <string>Ход</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
         <item row="2" column="0">
          <widget class="QListWidget" name="listWidget">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
           <item>
            <property name="text">
             <string>Ход 1</string>
@@ -412,6 +452,27 @@ QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
            <widget class="QPushButton" name="pushButton_nextStep">
             <property name="text">
              <string>&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Ход</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLineEdit" name="lineEdit_currentStep"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_step">
+            <property name="text">
+             <string>Ход</string>
             </property>
            </widget>
           </item>
@@ -466,7 +527,7 @@ QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
     <property name="title">
      <string>Файл</string>
     </property>
-    <addaction name="action"/>
+    <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menu">
     <property name="title">
@@ -478,7 +539,7 @@ QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="action">
+  <action name="actionQuit">
    <property name="text">
     <string>Выход</string>
    </property>
@@ -497,5 +558,22 @@ QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>420</x>
+     <y>328</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
