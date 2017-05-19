@@ -6,294 +6,455 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>387</width>
-    <height>500</height>
+    <width>475</width>
+    <height>790</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Options</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
-    <widget class="QScrollArea" name="scrollArea">
-     <property name="widgetResizable">
-      <bool>true</bool>
-     </property>
-     <widget class="QWidget" name="scrollAreaWidgetContents">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>367</width>
-        <height>480</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <widget class="QGroupBox" name="groupBoxFigure">
-         <property name="title">
-          <string>Фигуры</string>
-         </property>
-         <layout class="QFormLayout" name="formLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_comboFigureType">
-            <property name="text">
-             <string>Модель</string>
-            </property>
-           </widget>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>361</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>342</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="groupBoxFigure">
+       <property name="title">
+        <string>Фигуры</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_comboFigureType">
+          <property name="text">
+           <string>Модель</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboFigureType">
+          <item>
+           <property name="text">
+            <string>Model_ABC</string>
+           </property>
           </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="comboFigureType">
-            <item>
-             <property name="text">
-              <string>Model_ABC</string>
-             </property>
-            </item>
-           </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_comboFigureTexture">
+          <property name="text">
+           <string>Текстура</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboFigureTexture">
+          <item>
+           <property name="text">
+            <string>Дерево</string>
+           </property>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_comboFigureTexture">
-            <property name="text">
-             <string>Текстура</string>
-            </property>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Стекло</string>
+           </property>
           </item>
-          <item row="1" column="1">
-           <widget class="QComboBox" name="comboFigureTexture">
-            <item>
-             <property name="text">
-              <string>Дерево</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Стекло</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Металл</string>
-             </property>
-            </item>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Металл</string>
+           </property>
           </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_comboFigureSize">
-            <property name="text">
-             <string>Размер</string>
-            </property>
-           </widget>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_comboFigureSize">
+          <property name="text">
+           <string>Размер</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="comboFigureSize">
+          <item>
+           <property name="text">
+            <string>Маленький</string>
+           </property>
           </item>
-          <item row="2" column="1">
-           <widget class="QComboBox" name="comboFigureSize">
-            <item>
-             <property name="text">
-              <string>Маленький</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Средний</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Большой</string>
-             </property>
-            </item>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Средний</string>
+           </property>
           </item>
-          <item row="3" column="0" colspan="2">
-           <widget class="QCheckBox" name="checkFigureOpacity">
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включить/выключить прозрачные фигуры (чтобы можно было видеть что за ней, если камера находится в положении, когда между камерой и фигурой что-то находится)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="text">
-             <string>Прозрачность</string>
-            </property>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Большой</string>
+           </property>
           </item>
-          <item row="4" column="0" colspan="2">
-           <widget class="QCheckBox" name="checkFigureVolume">
-            <property name="toolTip">
-             <string>Включает объемные фигуры 3D</string>
-            </property>
-            <property name="text">
-             <string>Объемные фигуры</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QCheckBox" name="checkFigureOpacity">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включить/выключить прозрачные фигуры (чтобы можно было видеть что за ней, если камера находится в положении, когда между камерой и фигурой что-то находится)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>Прозрачность</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QCheckBox" name="checkFigureVolume">
+          <property name="toolTip">
+           <string>Включает объемные фигуры 3D</string>
+          </property>
+          <property name="text">
+           <string>Объемные фигуры</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="groupBoxBoard">
+       <property name="title">
+        <string>Доска</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_comboBoardTexture">
+          <property name="text">
+           <string>Материал</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboBoardTexture">
+          <item>
+           <property name="text">
+            <string>Дерево</string>
+           </property>
           </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QGroupBox" name="groupBoxBoard">
-         <property name="title">
-          <string>Доска</string>
-         </property>
-         <layout class="QFormLayout" name="formLayout_2">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_comboBoardTexture">
-            <property name="text">
-             <string>Материал</string>
-            </property>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Стекло</string>
+           </property>
           </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="comboBoardTexture">
-            <item>
-             <property name="text">
-              <string>Дерево</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Стекло</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Металл</string>
-             </property>
-            </item>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Металл</string>
+           </property>
           </item>
-          <item row="1" column="0" colspan="2">
-           <widget class="QCheckBox" name="checkBoardVolume">
-            <property name="text">
-             <string>Объемность доски</string>
-            </property>
-           </widget>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QCheckBox" name="checkBoardVolume">
+          <property name="text">
+           <string>Объемность доски</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QGroupBox" name="groupBoxAI">
+       <property name="title">
+        <string>Искусственный интеллект</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_4">
+        <item row="0" column="0">
+         <widget class="QCheckBox" name="checkAIEnable">
+          <property name="text">
+           <string>Включить AI</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_comboAILevel">
+          <property name="text">
+           <string>Уровень сложности</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboAILevel">
+          <item>
+           <property name="text">
+            <string>Легкий</string>
+           </property>
           </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QGroupBox" name="groupBoxMusic">
-         <property name="title">
-          <string>Звук/Музыка</string>
-         </property>
-         <layout class="QFormLayout" name="formLayout_3">
-          <item row="0" column="0" colspan="2">
-           <widget class="QCheckBox" name="checkSoundEnable">
-            <property name="text">
-             <string>Включить звуки/музыку?</string>
-            </property>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Средний</string>
+           </property>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_sliderSoundVolume">
-            <property name="text">
-             <string>Громкость</string>
-            </property>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Сложный</string>
+           </property>
           </item>
-          <item row="1" column="1">
-           <widget class="QSlider" name="sliderSoundVolume">
-            <property name="value">
-             <number>50</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_sliderAIResponse">
+          <property name="text">
+           <string>Скорость реакции</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSlider" name="sliderAIResponse">
+          <property name="value">
+           <number>75</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QGroupBox" name="groupBoxMusic">
+       <property name="title">
+        <string>Звук/Музыка</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0" colspan="2">
+         <widget class="QCheckBox" name="checkSoundEnable">
+          <property name="text">
+           <string>Включить звуки/музыку?</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_sliderSoundVolume">
+          <property name="text">
+           <string>Громкость</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSlider" name="sliderSoundVolume">
+          <property name="value">
+           <number>50</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_comboSoundType">
+          <property name="text">
+           <string>Тип звуков/музыки</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="comboSoundType">
+          <item>
+           <property name="text">
+            <string>Звуки природы</string>
+           </property>
           </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_comboSoundType">
-            <property name="text">
-             <string>Тип звуков/музыки</string>
-            </property>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Rock</string>
+           </property>
           </item>
-          <item row="2" column="1">
-           <widget class="QComboBox" name="comboSoundType">
-            <item>
-             <property name="text">
-              <string>Звуки природы</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Rock</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Metall</string>
-             </property>
-            </item>
-           </widget>
+          <item>
+           <property name="text">
+            <string>Metall</string>
+           </property>
           </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QGroupBox" name="groupBoxAI">
-         <property name="title">
-          <string>Искусственный интеллект</string>
-         </property>
-         <layout class="QFormLayout" name="formLayout_4">
-          <item row="0" column="0">
-           <widget class="QCheckBox" name="checkAIEnable">
-            <property name="text">
-             <string>Включить AI</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_comboAILevel">
-            <property name="text">
-             <string>Уровень сложности</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QComboBox" name="comboAILevel">
-            <item>
-             <property name="text">
-              <string>Легкий</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Средний</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Сложный</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_sliderAIResponse">
-            <property name="text">
-             <string>Скорость реакции</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QSlider" name="sliderAIResponse">
-            <property name="value">
-             <number>75</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-   </item>
-  </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxChessRanking">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>330</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Расстановка шахмат</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2"/>
+  </widget>
+  <widget class="QTableWidget" name="tableWidgetChessRanking">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>490</y>
+     <width>261</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>261</width>
+     <height>271</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>261</width>
+     <height>271</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style QTableWidget */
+QTableWidget {
+	color: rgba(0, 0, 255, 255);
+	background: rgba(238, 238, 238, 200);
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+
+QTableWidget::item:alternate {
+    background: #EEEEEE;
+}
+
+QTableWidget::item:selected {
+    border: 1px solid #6a6ea9;
+
+}
+
+QTableWidget::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ABAFE5, stop: 1 #8588B2);
+}
+
+QTableWidget::item:selected:active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #6a6ea9, stop: 1 #888dd9);
+}
+
+QTableWidget::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #FAFBFE, stop: 1 #DCDEF1);
+}</string>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>30</number>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>30</number>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>30</number>
+   </attribute>
+   <row>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>a</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>b</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>c</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>d</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>e</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>f</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>g</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>h</string>
+    </property>
+   </column>
+  </widget>
  </widget>
  <resources/>
  <connections/>
