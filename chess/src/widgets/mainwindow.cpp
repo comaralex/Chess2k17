@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDesktopWidget>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -15,6 +16,12 @@ MainWindow::MainWindow(QWidget *parent) :
     m_timer = new QTimer(this);
     m_timer->setInterval(1);
     m_timer->setSingleShot(false);
+
+    this->setGeometry(QStyle::alignedRect(
+                          Qt::LeftToRight,
+                          Qt::AlignCenter,
+                          window()->size(),
+                          QApplication::desktop()->availableGeometry()));
 
     connect(m_timer, SIGNAL(timeout()), this, SLOT(updateGui()));
 
@@ -97,4 +104,9 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
     default:
         break;
     }
+}
+
+void MainWindow::on_pushButton_quit_clicked()
+{
+    qApp->exit(0);
 }

@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>841</width>
-    <height>658</height>
+    <width>840</width>
+    <height>650</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>840</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>840</width>
+    <height>650</height>
+   </size>
   </property>
   <property name="mouseTracking">
    <bool>true</bool>
@@ -513,14 +525,38 @@ QListWidget::item:hover {
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>510</y>
+      <width>191</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans</family>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Переключение камеры F1, F2. Передвижение wsad.                Обзор мышью.                Сокрыть все меню M.</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>841</width>
-     <height>21</height>
+     <width>840</width>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFIle">

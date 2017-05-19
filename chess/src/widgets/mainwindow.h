@@ -24,6 +24,8 @@ private slots:
     void on_pushButton_figures_clicked();
 
     void updateGui();
+    void on_pushButton_quit_clicked();
+
 private:
     void styleSheetOptions();
 
